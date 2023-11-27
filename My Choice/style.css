@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -42,4 +45,15 @@ main{
     align-items: center;
     gap: 10rem;
     
+}
+
+h1{
+  
+  text-align: center;
+  
+}
+
+#randomChoiceContainer{
+  position: relative;
+  bottom: -200px;
 }

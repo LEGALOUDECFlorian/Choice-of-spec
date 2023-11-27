@@ -28,18 +28,36 @@ form.addEventListener("submit", function (event){
 })
 
 function addChoiceContainerToDom() {
-    console.log("j'arrive");
+   
     const main = document.querySelector('main');
-    const choiceContainer = document.getElementById(`randomChoiceContainer`);
+   
+
+    // création du fond 
+    const imgContainer = document.createElement(`section`);
+    imgContainer.id = `imgContainer`;
+    imgContainer.style.backgroundImage = `url(./images/boule_de_cristal.jpg)`;
+    imgContainer.style.width = '600px';
+    imgContainer.style.height = '485px';
+    main.appendChild(imgContainer);
+    
+    
+
+
+    // const choiceContainer = document.getElementById(`randomChoiceContainer`);
+    const choiceContainer = document.createElement(`div`);
+    choiceContainer.id = `randomChoiceContainer`;
+    imgContainer.appendChild(choiceContainer);
     buildResultChoiceContainerHTML();
-    console.log("j'arrive2");
-    const buttonContainer = document.getElementById('buttonContainer'); 
+   
+    
+
+    // const buttonContainer = document.getElementById('buttonContainer'); 
     const luckyButton = document.getElementById(`luckyButton`);
     luckyButton.addEventListener('click', () => {
       buildResultChoiceContainerHTML();
       count();
     });
-    console.log("j'arrive3" + luckyButton);
+   
   
     function buildResultChoiceContainerHTML() {
       function booleenRandomer() {
